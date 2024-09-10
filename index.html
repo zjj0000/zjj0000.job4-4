@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>zjj</title>
+</head>
+<body>
+    <h3>点击可以变身</h3>
+    <img  id="myimage"  onclick="changeImage()"   src="1.jpg" width="200" height="250">
 
+    <script>
+        function changeImage(){
+            alert("函数调用成功！");
+            const element = document.getElementById("myimage"); 
+            let a = element.src.endsWith("1.jpg");
+            console.log(a);
+            if (element.src.endsWith("1.jpg")) //判断灯泡关闭状态
+            {
+                element.src = "2.jpg"; //打开灯泡
+            } else 
+            {
+                element.src = "1.jpg"; //关闭灯泡
+            }
+
+        }
+    </script>
+</body>
+</html>
